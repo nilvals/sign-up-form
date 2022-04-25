@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="image">
+        <div class="sidebar">
+            <img src="./assets/icon.png" alt="Github icon">
+            <a href="https://github.com/nilvals" target="_blank">nilvals</a>
+        </div>
+
+        <div class="caption">Photo by <a href="https://unsplash.com/@rpnickson" target="_blank">Roberto Nickson</a> on <a href="https://unsplash.com/" target="_blank">Unsplashed</a></div>
+    </div>
+
+    <main>
+        <div class="description">
+            <p>This is not a real online service! Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, vero! Sign up <span>now</span> to get started.</p>
+            <p>You <span>know</span> you want to.</p>
+        </div>
+
+        <form action="index.html" id="form">
+            <fieldset>
+                <legend>Let's do this!</legend>
+
+                <div class="name">
+                    <div class="first_name">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" pattern="[A-Za-z]{1,}" title="Enter alphabetical characters only." placeholder="John" required>
+                    </div>
+
+                    <div class="last_name">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" pattern="[A-Za-z]{1,}" title="Enter alphabetical characters only." placeholder="Doe" required>
+                    </div>
+                </div>
+
+                <div class="contact_info">
+                    <div class="email">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Enter a valid domain name." placeholder="johndoe@email.com" required>
+                    </div>
+
+                    <div class="phone">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" pattern="[0-9]{10}" title="Enter a 10 digit phone number without any space or symbol." placeholder="1234567890" required>
+                    </div>
+                </div>
+
+                <div class="passwords">
+                    <div class="password">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must be at least 8 characters long, contains at least one lowercase, uppercase, and numeric character." required>
+                        <p id="validation">*Password does not match</p>
+                    </div>
+
+                    <div class="password_confirm">
+                        <label for="password_confirm">Confirm Password</label>
+                        <input type="password" id="password_confirm" required>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+        <div class="sign-in">
+            <button form="form">Create Account</button>
+            <p>Already have an account? <a href="index.html">Log in</a></p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
